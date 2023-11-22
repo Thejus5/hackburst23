@@ -26,6 +26,7 @@ export const CountDownLabelHeader = styled.p`
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 
   margin: 0 auto;
   margin-bottom: 32px;

@@ -32,5 +32,6 @@ export const Avatar = styled.img`
   @media (max-width: 460px) {
     width: 400px;
     height: 400px;
+    top: 40%;
   }
 `;
