@@ -6,7 +6,7 @@ function TimerBox() {
   return (
     <TimerContainer>
       <CountDownLabelHeader>{texts.countDownBegins}</CountDownLabelHeader>
-      {/* <Timer /> */}
+      <Timer />
       <Description>
        {texts.description}
       </Description>

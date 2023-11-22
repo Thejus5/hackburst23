@@ -10,6 +10,7 @@ export const TimerContainer = styled.div`
   max-width: 920px;
   height: fit-content;
   margin-bottom: 38px;
+  padding: 0 10px;
   /* background-color: #ff0000; */
   
 `;
@@ -54,6 +55,7 @@ export const Description = styled.div`
   margin-top: 44px;
 
   @media (max-width: 930px) {
-   margin: 0 10px;
+   margin: 0 5px;
+   margin-top: 44px;
   }
 `;
