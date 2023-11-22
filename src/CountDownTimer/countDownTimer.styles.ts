@@ -30,6 +30,12 @@ export const CountDownLabelHeader = styled.p`
 
   margin: 0 auto;
   margin-bottom: 32px;
+  @media (max-width: 550px) {
+    font-size: 20px;
+  }
+  @media (max-width: 430px) {
+    font-size: 16px;
+  }
 `;
 
 export const Description = styled.div`
@@ -55,8 +61,4 @@ export const Description = styled.div`
   margin: 0 auto;
   margin-top: 44px;
 
-  @media (max-width: 930px) {
-   margin: 0 5px;
-   margin-top: 44px;
-  }
 `;
