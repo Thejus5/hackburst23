@@ -9,7 +9,7 @@ import { appConfig } from "../../core/appConfig";
 function Navigation() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const toggleModal = (openedModal: string) => {
+  const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
@@ -26,20 +26,10 @@ function Navigation() {
       <div className="container">
         <Title />
         <div className="linkWrapper">
-          <p
-            className="textLinks"
-            onClick={() => {
-              toggleModal("rules");
-            }}
-          >
+          <p className="textLinks" onClick={toggleModal}>
             Rules
           </p>
-          <p
-            className="textLinks"
-            onClick={() => {
-              toggleModal("leaderboard");
-            }}
-          >
+          <p className="textLinks" onClick={toggleModal}>
             Leaderboard
           </p>
           <Button label={texts.register} onClick={navigateToRegistration} />
@@ -49,20 +39,10 @@ function Navigation() {
         </label>
         <aside className="sideBar">
           <div className="sidebarLinks">
-            <p
-              className="textLinks"
-              onClick={() => {
-                toggleModal("rules");
-              }}
-            >
+            <p className="textLinks" onClick={toggleModal}>
               Rules
             </p>
-            <p
-              className="textLinks"
-              onClick={() => {
-                toggleModal("leaderboard");
-              }}
-            >
+            <p className="textLinks" onClick={toggleModal}>
               Leaderboard
             </p>
             <Button label={texts.register} onClick={navigateToRegistration} />
