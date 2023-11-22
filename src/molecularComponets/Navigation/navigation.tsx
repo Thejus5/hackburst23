@@ -7,11 +7,9 @@ import { StyledNav } from "./navigation.style";
 import { appConfig } from "../../core/appConfig";
 
 function Navigation() {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
-  const [modalType, setModalType] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const toggleModal = (openedModal: string) => {
-    setModalType(openedModal);
     setIsModalOpen(!isModalOpen);
   };
 
@@ -44,7 +42,7 @@ function Navigation() {
           >
             Leaderboard
           </p>
-          <Button label={texts.register} onClick={navigateToRegistration}/>
+          <Button label={texts.register} onClick={navigateToRegistration} />
         </div>
         <label className="hamburgerMenu">
           <input type="checkbox" />
@@ -72,11 +70,7 @@ function Navigation() {
         </aside>
       </div>
 
-      <FullPageModal
-        open={isModalOpen}
-        type={modalType}
-        closeModal={closeModal}
-      />
+      <FullPageModal open={isModalOpen} closeModal={closeModal} />
     </StyledNav>
   );
 }

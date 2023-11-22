@@ -3,9 +3,8 @@ import CloseIcon from "../../assets/closeIcon.png";
 
 function FullPageModal({
   open,
-  type,
   closeModal,
-}: Readonly<{ open: boolean; type: string; closeModal: () => void }>) {
+}: Readonly<{ open: boolean; closeModal: () => void }>) {
   return (
     <ModalWrapper open={open}>
       <div className="innerBox">
