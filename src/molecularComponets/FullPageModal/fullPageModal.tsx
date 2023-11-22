@@ -23,7 +23,7 @@ function FullPageModal({
           Stay tuned, stay excited, and get ready for an adventure! 🚀✨ <br />
           <br />
           Cheers, <br />
-          The Event Team 🎉 <br />
+          Kairo 🎉 <br />
           <br />
           P.S. In the meantime, feel free to spread the excitement with your
           fellow participants!
