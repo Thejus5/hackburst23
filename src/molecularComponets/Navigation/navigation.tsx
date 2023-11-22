@@ -4,19 +4,24 @@ import Title from "../../atomicComponents/Title/title";
 import { texts } from "../../core/texts";
 import FullPageModal from "../FullPageModal/fullPageModal";
 import { StyledNav } from "./navigation.style";
+import { appConfig } from "../../core/appConfig";
 
 function Navigation() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
-  const [modalType,setModalType] = useState<string>('')
+  const [modalType, setModalType] = useState<string>("");
 
   const toggleModal = (openedModal: string) => {
-    setModalType(openedModal)
+    setModalType(openedModal);
     setIsModalOpen(!isModalOpen);
   };
 
-  const closeModal = ()=>{
-    setIsModalOpen(false)
-  }
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const navigateToRegistration = () => {
+    window.open(appConfig.registrationLink, "_blank");
+  };
 
   return (
     <StyledNav>
@@ -39,7 +44,7 @@ function Navigation() {
           >
             Leaderboard
           </p>
-          <Button label={texts.register} />
+          <Button label={texts.register} onClick={navigateToRegistration}/>
         </div>
         <label className="hamburgerMenu">
           <input type="checkbox" />
@@ -62,12 +67,16 @@ function Navigation() {
             >
               Leaderboard
             </p>
-            <Button label={texts.register} />
+            <Button label={texts.register} onClick={navigateToRegistration} />
           </div>
         </aside>
       </div>
 
-      <FullPageModal open={isModalOpen} type={modalType} closeModal={closeModal}/>
+      <FullPageModal
+        open={isModalOpen}
+        type={modalType}
+        closeModal={closeModal}
+      />
     </StyledNav>
   );
 }
