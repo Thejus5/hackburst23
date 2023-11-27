@@ -126,10 +126,9 @@ export const ContactInfoBox = styled.div`
     font-size: 18px;
     margin-bottom: 10px;
   }
-  .link:active,
-  .link:visited{
+  .link{
     text-decoration: none;
-    color: inherit;
+    color: ${colors.white};
     cursor: pointer;
     // -
   }
