@@ -20,7 +20,8 @@ export const ModalWrapper = styled.section<{open:boolean}>`
 
   .innerBox{
     position: relative;
-    width: 80%;
+    width: fit-content;
+    max-width: 80%;
     padding: 20px;
     border: 1px solid ${colors.blue};
     border-radius: 12px;

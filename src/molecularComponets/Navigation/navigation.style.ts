@@ -116,3 +116,21 @@ export const StyledNav = styled.nav`
     }
   }
 `;
+
+export const ContactInfoBox = styled.div`
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  color: ${colors.white};
+  .label{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .link:active,
+  .link:visited{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    // -
+  }
+`
