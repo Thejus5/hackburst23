@@ -6,26 +6,27 @@ import { StyledNav } from "./navigation.style";
 import { appConfig } from "../../core/appConfig";
 import RulesModal from "../RulesModal/rulesModal";
 import ContactModal from "../ContactModal/contactModal";
+import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
 
 function Navigation() {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isRulesOpen, setIsRulesOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+  const [isLeaderBoardOpen, setIsLeaderBoardOpen] = useState<boolean>(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
   const toggleRules = () => {
     setIsRulesOpen(!isRulesOpen);
   };
   const toggleContact = () => {
-    setIsContactOpen(!isRulesOpen);
+    setIsContactOpen(!isContactOpen);
+  };
+  const toggleLeaderboard = () => {
+    setIsLeaderBoardOpen(!isLeaderBoardOpen);
   };
 
   const closeModal = () => {
-    isModalOpen && setIsModalOpen(false);
     isRulesOpen && setIsRulesOpen(false);
     isContactOpen && setIsContactOpen(false);
+    isLeaderBoardOpen && setIsLeaderBoardOpen(false);
   };
 
   const navigateToRegistration = () => {
@@ -40,7 +41,7 @@ function Navigation() {
           <p className="textLinks" onClick={toggleRules}>
             Rules
           </p>
-          <p className="textLinks" onClick={toggleModal}>
+          <p className="textLinks" onClick={toggleLeaderboard}>
             Leaderboard
           </p>
           <p className="textLinks" onClick={toggleContact}>
@@ -56,7 +57,7 @@ function Navigation() {
             <p className="textLinks" onClick={toggleRules}>
               Rules
             </p>
-            <p className="textLinks" onClick={toggleModal}>
+            <p className="textLinks" onClick={toggleLeaderboard}>
               Leaderboard
             </p>
             <p className="textLinks" onClick={toggleContact}>
@@ -68,7 +69,8 @@ function Navigation() {
       </div>
 
       <RulesModal open={isRulesOpen} closeModal={closeModal} />
-      <ContactModal open={isContactOpen} closeModal={closeModal}/>
+      <ContactModal open={isContactOpen} closeModal={closeModal} />
+      <LeaderboardModal open={isLeaderBoardOpen} closeModal={closeModal} />
     </StyledNav>
   );
 }
