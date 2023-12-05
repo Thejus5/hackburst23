@@ -2,36 +2,31 @@ import { useState } from "react";
 import Button from "../../atomicComponents/Button/button";
 import Title from "../../atomicComponents/Title/title";
 import { texts } from "../../core/texts";
-import FullPageModal from "../FullPageModal/fullPageModal";
-import { ContactInfoBox, StyledNav } from "./navigation.style";
+import { StyledNav } from "./navigation.style";
 import { appConfig } from "../../core/appConfig";
-
-function ContactInfo() {
-  return (
-    <ContactInfoBox>
-      <p className="label">Send me your queries @</p>
-      <a
-        href="mailto:kairo.hackburst@qburst.com"
-        target="_blank"
-        className="link"
-      >
-        kairo.hackburst@qburst.com
-      </a>
-    </ContactInfoBox>
-  );
-}
+import RulesModal from "../RulesModal/rulesModal";
+import ContactModal from "../ContactModal/contactModal";
+import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
 
 function Navigation() {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [isContact, setIsContact] = useState<boolean>(false);
+  const [isRulesOpen, setIsRulesOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+  const [isLeaderBoardOpen, setIsLeaderBoardOpen] = useState<boolean>(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const toggleRules = () => {
+    setIsRulesOpen(!isRulesOpen);
+  };
+  const toggleContact = () => {
+    setIsContactOpen(!isContactOpen);
+  };
+  const toggleLeaderboard = () => {
+    setIsLeaderBoardOpen(!isLeaderBoardOpen);
   };
 
   const closeModal = () => {
-    setIsContact(false);
-    setIsModalOpen(false);
+    isRulesOpen && setIsRulesOpen(false);
+    isContactOpen && setIsContactOpen(false);
+    isLeaderBoardOpen && setIsLeaderBoardOpen(false);
   };
 
   const navigateToRegistration = () => {
@@ -43,19 +38,13 @@ function Navigation() {
       <div className="container">
         <Title />
         <div className="linkWrapper">
-          <p className="textLinks" onClick={toggleModal}>
+          <p className="textLinks" onClick={toggleRules}>
             Rules
           </p>
-          <p className="textLinks" onClick={toggleModal}>
+          <p className="textLinks" onClick={toggleLeaderboard}>
             Leaderboard
           </p>
-          <p
-            className="textLinks"
-            onClick={() => {
-              setIsContact(true);
-              toggleModal();
-            }}
-          >
+          <p className="textLinks" onClick={toggleContact}>
             contact
           </p>
           <Button label={texts.register} onClick={navigateToRegistration} />
@@ -65,19 +54,13 @@ function Navigation() {
         </label>
         <aside className="sideBar">
           <div className="sidebarLinks">
-            <p className="textLinks" onClick={toggleModal}>
+            <p className="textLinks" onClick={toggleRules}>
               Rules
             </p>
-            <p className="textLinks" onClick={toggleModal}>
+            <p className="textLinks" onClick={toggleLeaderboard}>
               Leaderboard
             </p>
-            <p
-              className="textLinks"
-              onClick={() => {
-                setIsContact(true);
-                toggleModal();
-              }}
-            >
+            <p className="textLinks" onClick={toggleContact}>
               contact
             </p>
             <Button label={texts.register} onClick={navigateToRegistration} />
@@ -85,9 +68,9 @@ function Navigation() {
         </aside>
       </div>
 
-      <FullPageModal open={isModalOpen} closeModal={closeModal}>
-        {isContact && <ContactInfo />}
-      </FullPageModal>
+      <RulesModal open={isRulesOpen} closeModal={closeModal} />
+      <ContactModal open={isContactOpen} closeModal={closeModal} />
+      <LeaderboardModal open={isLeaderBoardOpen} closeModal={closeModal} />
     </StyledNav>
   );
 }
