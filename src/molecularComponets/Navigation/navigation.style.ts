@@ -4,6 +4,7 @@ import { colors } from "../../core/colors";
 export const StyledNav = styled.nav`
   padding: 24px 10px;
   background-color: #3c60b35d; //TODO: change to linear gradient
+  z-index: 1000;
   .container {
     display: flex;
     align-items: center;
