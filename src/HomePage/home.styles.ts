@@ -32,5 +32,5 @@ export const AvatarWrapper = styled.div`
 
 export const LeaderBoardWrapper = styled.div`
   width: 100%;
-  background-color: azure;
+  /* background-color: azure; */
 `;
