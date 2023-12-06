@@ -100,6 +100,7 @@ Error generating stack: `+o.message+`
 `;function Om(){return N.jsx(Im,{children:go.appTitle})}const Yl={register:"Register",countDownBegins:"Countdown Begins",description:"Get ready to ignite your innovation! Join us at Hackburst'23 on December 8th as the countdown begins to a coding frenzy like never before. Unleash your creativity and hack your way to glory!"},Am=ke.nav`
   padding: 24px 10px;
   background-color: #3c60b35d; //TODO: change to linear gradient
+  z-index: 1000;
   .container {
     display: flex;
     align-items: center;
