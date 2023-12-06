@@ -5,7 +5,7 @@ import avatarImage from "../../assets/avatar.png";
 function AppBackground({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <Background>
-      <Avatar src={avatarImage} alt="Avatar Image"/>
+      {/* <Avatar src={avatarImage} alt="Avatar Image"/> */}
       {children}
     </Background>
   );

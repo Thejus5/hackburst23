@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import bgImage from "../../assets/backgroundImage1.png";
+import bgImage from "../../assets/backgroundImage.png";
 
 export const Background = styled.section`
   position: relative;
