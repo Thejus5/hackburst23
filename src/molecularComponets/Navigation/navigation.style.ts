@@ -4,6 +4,7 @@ import { colors } from "../../core/colors";
 export const StyledNav = styled.nav`
   padding: 24px 10px;
   background-color: #3c60b35d; //TODO: change to linear gradient
+
   .container {
     display: flex;
     align-items: center;
@@ -87,7 +88,6 @@ export const StyledNav = styled.nav`
       rgba(4, 47, 112, 0.47) 84.22%
     );
     backdrop-filter: blur(3.2949790954589844px);
-    padding: 10px;
 
     translate: 100%;
     transition: translate 200ms ease-in-out;

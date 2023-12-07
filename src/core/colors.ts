@@ -5,4 +5,5 @@ export const colors = {
   yellow: "#FFA900",
   green: "#009E61",
   dividerGrey: "#A4BADD",
+  buttonBlue: "#00A2D1",
 };

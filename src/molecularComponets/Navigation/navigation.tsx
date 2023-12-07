@@ -7,6 +7,9 @@ import { appConfig } from "../../core/appConfig";
 import RulesModal from "../RulesModal/rulesModal";
 import ContactModal from "../ContactModal/contactModal";
 import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
+import IconButton from "../../atomicComponents/IconButton/iconButton";
+
+import MailIcon from '../../assets/mailIconWhite.svg'
 
 function Navigation() {
   const [isRulesOpen, setIsRulesOpen] = useState<boolean>(false);
@@ -45,9 +48,12 @@ function Navigation() {
             Leaderboard
           </p>
           <p className="textLinks" onClick={toggleContact}>
+            How to play?
+          </p>
+          <p className="textLinks" onClick={toggleContact}>
             contact
           </p>
-          <Button label={texts.register} onClick={navigateToRegistration} />
+          <IconButton icon={MailIcon}/>
         </div>
         <label className="hamburgerMenu">
           <input type="checkbox" />
@@ -61,9 +67,12 @@ function Navigation() {
               Leaderboard
             </p>
             <p className="textLinks" onClick={toggleContact}>
+              How to play?
+            </p>
+            <p className="textLinks" onClick={toggleContact}>
               contact
             </p>
-            <Button label={texts.register} onClick={navigateToRegistration} />
+            <IconButton icon={MailIcon}/>
           </div>
         </aside>
       </div>
@@ -71,6 +80,8 @@ function Navigation() {
       <RulesModal open={isRulesOpen} closeModal={closeModal} />
       <ContactModal open={isContactOpen} closeModal={closeModal} />
       <LeaderboardModal open={isLeaderBoardOpen} closeModal={closeModal} />
+
+     
     </StyledNav>
   );
 }
