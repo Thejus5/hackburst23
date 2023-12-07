@@ -3,6 +3,7 @@ export interface QuestionConfigInterface {
   opensIn: string;
   hintIn: string;
   deadLine: string;
+  questionLink?: string;
 }
 
 export const appConfig = {
@@ -31,6 +32,7 @@ export const questionConfig: QuestionConfigInterface[] = [
     opensIn: "8 december 2023 18:00:00",
     hintIn: "8 december 2023 18:30:00",
     deadLine: "9 december 2023 06:00:00",
+    questionLink:"www.google.com"
   },
   {
     questionName: "1",

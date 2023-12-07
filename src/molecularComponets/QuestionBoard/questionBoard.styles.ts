@@ -70,4 +70,9 @@ export const DataTable = styled.table`
     text-transform: uppercase;
     padding-bottom: 15px;
   }
+
+  a {
+    text-decoration: underline;
+    color: ${colors.white};
+  }
 `;
