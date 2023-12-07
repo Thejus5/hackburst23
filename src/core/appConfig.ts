@@ -1,3 +1,10 @@
+export interface QuestionConfigInterface {
+  questionName: string;
+  opensIn: string;
+  hintIn: string;
+  deadLine: string;
+}
+
 export const appConfig = {
   appTitle: "HackBurst '23",
   deadLineDate: "8 december 2023 18:00:00", // Keep the format
@@ -17,3 +24,42 @@ export const appConfig = {
     "Each team will be provided with a Repository, you can push your codes, prompts, etc to the respective folders. Add as many details as possible for each puzzle describing how you solved the same.",
   ],
 };
+
+export const questionConfig: QuestionConfigInterface[] = [
+  {
+    questionName: "Main",
+    opensIn: "8 december 2023 18:00:00",
+    hintIn: "8 december 2023 18:30:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+  {
+    questionName: "1",
+    opensIn: "8 december 2023 19:00:00",
+    hintIn: "8 december 2023 19:30:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+  {
+    questionName: "2",
+    opensIn: "8 december 2023 21:30:00",
+    hintIn: "8 december 2023 22:00:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+  {
+    questionName: "3",
+    opensIn: "8 december 2023 23:00:00",
+    hintIn: "8 december 2023 23:30:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+  {
+    questionName: "4",
+    opensIn: "9 december 2023 02:00:00",
+    hintIn: "8 december 2023 02:30:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+  {
+    questionName: "5",
+    opensIn: "8 december 2023 03:30:00",
+    hintIn: "8 december 2023 04:00:00",
+    deadLine: "9 december 2023 06:00:00",
+  },
+];
