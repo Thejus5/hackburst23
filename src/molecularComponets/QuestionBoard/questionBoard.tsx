@@ -7,9 +7,9 @@ import {
 } from "../../core/appConfig";
 import useTimerEngine from "../../core/utils/useTimerEngine";
 import MiniTimer from "../MiniTimer/miniTimer";
-import { DataTable, Wrapper } from "./leaderBoard.styles";
+import { DataTable, Wrapper } from "./questionBoard.styles";
 
-export default function LeaderBoard() {
+export default function QuestionBoard() {
   return (
     <Wrapper>
       <div className="padding">
