@@ -14,7 +14,7 @@ export const StyledButton = styled.button`
     height: 32px;
   }
 
-  @media (max-width: 375px){
+  @media (max-width: 930px){
     width: 80vw;
   }
 `;
