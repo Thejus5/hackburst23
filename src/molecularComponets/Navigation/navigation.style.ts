@@ -27,6 +27,9 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     cursor: pointer;
   }
+  .textLinks:last-child{
+    margin: 0;
+  }
 
   .hamburgerMenu {
     z-index: 2;

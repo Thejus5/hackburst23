@@ -53,7 +53,7 @@ function Navigation() {
           <p className="textLinks" onClick={toggleContact}>
             contact
           </p>
-          <IconButton icon={MailIcon}/>
+          {/* <IconButton icon={MailIcon}/> */}
         </div>
         <label className="hamburgerMenu">
           <input type="checkbox" />
@@ -72,7 +72,7 @@ function Navigation() {
             <p className="textLinks" onClick={toggleContact}>
               contact
             </p>
-            <IconButton icon={MailIcon}/>
+            {/* <IconButton icon={MailIcon}/> */}
           </div>
         </aside>
       </div>
