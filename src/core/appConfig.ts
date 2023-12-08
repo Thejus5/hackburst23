@@ -55,13 +55,13 @@ export const questionConfig: QuestionConfigInterface[] = [
   {
     questionName: "4",
     opensIn: "9 december 2023 02:00:00",
-    hintIn: "8 december 2023 02:30:00",
+    hintIn: "9 december 2023 02:30:00",
     deadLine: "9 december 2023 06:00:00",
   },
   {
     questionName: "5",
-    opensIn: "8 december 2023 03:30:00",
-    hintIn: "8 december 2023 04:00:00",
+    opensIn: "9 december 2023 03:30:00",
+    hintIn: "9 december 2023 04:00:00",
     deadLine: "9 december 2023 06:00:00",
   },
 ];

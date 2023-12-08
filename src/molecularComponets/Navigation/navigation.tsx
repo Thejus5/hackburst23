@@ -9,11 +9,13 @@ import ContactModal from "../ContactModal/contactModal";
 import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
 import IconButton from "../../atomicComponents/IconButton/iconButton";
 
-import MailIcon from '../../assets/mailIconWhite.svg'
+import MailIcon from "../../assets/mailIconWhite.svg";
+import HowToPlayModal from "../HowToPlayModal/howToPlayModal";
 
 function Navigation() {
   const [isRulesOpen, setIsRulesOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+  const [isHowToPlayOpen, setIsHowToPlayOpen] = useState<boolean>(false);
   const [isLeaderBoardOpen, setIsLeaderBoardOpen] = useState<boolean>(false);
 
   const toggleRules = () => {
@@ -25,11 +27,15 @@ function Navigation() {
   const toggleLeaderboard = () => {
     setIsLeaderBoardOpen(!isLeaderBoardOpen);
   };
+  const toggleHowToPlay = () => {
+    setIsHowToPlayOpen(!isHowToPlayOpen);
+  };
 
   const closeModal = () => {
     isRulesOpen && setIsRulesOpen(false);
     isContactOpen && setIsContactOpen(false);
     isLeaderBoardOpen && setIsLeaderBoardOpen(false);
+    isHowToPlayOpen && setIsHowToPlayOpen(false);
   };
 
   const navigateToRegistration = () => {
@@ -47,7 +53,7 @@ function Navigation() {
           <p className="textLinks" onClick={toggleLeaderboard}>
             Leaderboard
           </p>
-          <p className="textLinks" onClick={toggleContact}>
+          <p className="textLinks" onClick={toggleHowToPlay}>
             How to play?
           </p>
           <p className="textLinks" onClick={toggleContact}>
@@ -66,7 +72,7 @@ function Navigation() {
             <p className="textLinks" onClick={toggleLeaderboard}>
               Leaderboard
             </p>
-            <p className="textLinks" onClick={toggleContact}>
+            <p className="textLinks" onClick={toggleHowToPlay}>
               How to play?
             </p>
             <p className="textLinks" onClick={toggleContact}>
@@ -80,8 +86,7 @@ function Navigation() {
       <RulesModal open={isRulesOpen} closeModal={closeModal} />
       <ContactModal open={isContactOpen} closeModal={closeModal} />
       <LeaderboardModal open={isLeaderBoardOpen} closeModal={closeModal} />
-
-     
+      <HowToPlayModal open={isHowToPlayOpen} closeModal={closeModal} />
     </StyledNav>
   );
 }
