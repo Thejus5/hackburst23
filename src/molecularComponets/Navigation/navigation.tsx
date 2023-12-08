@@ -47,11 +47,11 @@ function Navigation() {
           <p className="textLinks" onClick={toggleRules}>
             Rules
           </p>
-          <p className="textLinks" onClick={toggleLeaderboard}>
-            Leaderboard
-          </p>
           <p className="textLinks" onClick={toggleHowToPlay}>
             How to play?
+          </p>
+          <p className="textLinks" onClick={toggleLeaderboard}>
+            Leaderboard
           </p>
           <p className="textLinks" onClick={toggleContact}>
             contact
@@ -66,11 +66,11 @@ function Navigation() {
             <p className="textLinks" onClick={toggleRules}>
               Rules
             </p>
-            <p className="textLinks" onClick={toggleLeaderboard}>
-              Leaderboard
-            </p>
             <p className="textLinks" onClick={toggleHowToPlay}>
               How to play?
+            </p>
+            <p className="textLinks" onClick={toggleLeaderboard}>
+              Leaderboard
             </p>
             <p className="textLinks" onClick={toggleContact}>
               contact
