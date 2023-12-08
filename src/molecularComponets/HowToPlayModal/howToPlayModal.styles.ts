@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { colors } from "../../core/colors";
 
 export const HowToPlayWrapper = styled.div`
   width: 100%;
   height: 75vh;
   position: relative;
   overflow: hidden;
+
+  hr {
+    border: 1px solid ${colors.dividerGrey};
+    margin: 15px 0 18px;
+  }
 
   .scrollDiv {
     position: absolute;
