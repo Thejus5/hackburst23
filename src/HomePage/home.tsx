@@ -9,11 +9,12 @@ export default function Home() {
     <AppBackground>
       <Navigation />
       <HomeWrapper>
-        <img className="avatarImage" src={AvatarImage} alt="avatar image" />
+      <img className="avatarImage" src={AvatarImage} alt="avatar image" />
         {/* <AvatarWrapper></AvatarWrapper> */}
         <LeaderBoardWrapper>
           <LeaderBoard />
         </LeaderBoardWrapper>
+        <img className="avatarImageMobile" src={AvatarImage} alt="avatar image" />
       </HomeWrapper>
     </AppBackground>
   );

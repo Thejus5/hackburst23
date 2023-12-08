@@ -21,14 +21,21 @@ export const HomeWrapper = styled.section`
     height: auto;
     /* animation: ${bobAnimation} 2s infinite alternate; */
   }
+  .avatarImageMobile{
+    display: none;
+  }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1250px) {
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     overflow-y: scroll;
-    .avatarImage{
-      width: 75%;
+    .avatarImageMobile{
+      display: flex;
+      width: 70%;
       margin: 0 auto;
+    }
+    .avatarImage{
+      display: none;
     }
   }
 `;
@@ -43,7 +50,7 @@ export const AvatarWrapper = styled.div`
     height: auto;
     animation: ${bobAnimation} 2s infinite alternate;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1250px) {
     margin: 0 auto;
     display: flex;
     height: 100%;
@@ -55,7 +62,7 @@ export const LeaderBoardWrapper = styled.div`
   flex-grow: 1;
   width: 100%;
   padding: 0 10px;
-  @media (max-width: 1000px) {
+  @media (max-width: 1250px) {
     display: flex;
     justify-content: center;
   }

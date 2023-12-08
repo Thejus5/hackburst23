@@ -107,7 +107,7 @@ export const StyledNav = styled.nav`
     translate: 0;
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 1050px) {
     .linkWrapper {
       display: none;
     }
