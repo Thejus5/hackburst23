@@ -30,38 +30,38 @@ export const questionConfig: QuestionConfigInterface[] = [
   {
     questionName: "Main",
     opensIn: "8 december 2023 18:00:00",
-    hintIn: "8 december 2023 18:30:00",
+    hintIn: "8 december 2023 18:10:00",
     deadLine: "9 december 2023 06:00:00",
-    questionLink:"https://kairo.hackburst23.qburst.build/generic.pdf"
+    questionLink: "https://kairo.hackburst23.qburst.build/generic.pdf",
   },
   {
     questionName: "1",
     opensIn: "8 december 2023 19:00:00",
-    hintIn: "8 december 2023 19:30:00",
+    hintIn: "8 december 2023 19:10:00",
     deadLine: "9 december 2023 06:00:00",
   },
   {
     questionName: "2",
     opensIn: "8 december 2023 21:30:00",
-    hintIn: "8 december 2023 22:00:00",
+    hintIn: "8 december 2023 21:40:00",
     deadLine: "9 december 2023 06:00:00",
   },
   {
     questionName: "3",
     opensIn: "8 december 2023 23:00:00",
-    hintIn: "8 december 2023 23:30:00",
+    hintIn: "8 december 2023 23:10:00",
     deadLine: "9 december 2023 06:00:00",
   },
   {
     questionName: "4",
     opensIn: "9 december 2023 02:00:00",
-    hintIn: "9 december 2023 02:30:00",
+    hintIn: "9 december 2023 02:10:00",
     deadLine: "9 december 2023 06:00:00",
   },
   {
     questionName: "5",
     opensIn: "9 december 2023 03:30:00",
-    hintIn: "9 december 2023 04:00:00",
+    hintIn: "9 december 2023 03:40:00",
     deadLine: "9 december 2023 06:00:00",
   },
 ];
