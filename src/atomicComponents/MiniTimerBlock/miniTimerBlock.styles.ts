@@ -29,6 +29,11 @@ export const TimerWrapper = styled.div`
     text-transform: uppercase;
     color: ${colors.white};
   }
+
+  @media (max-width: 500px) {
+    width: 35px;
+    height: 42px;
+  }
 `;
 
 export const TimerDividerImage = styled.img`

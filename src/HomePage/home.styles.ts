@@ -2,10 +2,10 @@ import styled, { keyframes } from "styled-components";
 
 const bobAnimation = keyframes`
     0% {
-        top: -10px;
+      margin-top: -10px;
     }
     100% {
-        top: 10px;
+      margin-top: 10px;
     }
 `;
 
@@ -13,24 +13,54 @@ export const HomeWrapper = styled.section`
   display: flex;
   width: 100%;
   max-width: 1440px;
+  height: 90vh;
   margin: 0 auto;
+
+  .avatarImage{
+    width: 100%;
+    height: auto;
+    /* animation: ${bobAnimation} 2s infinite alternate; */
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    .avatarImage{
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const AvatarWrapper = styled.div`
-  position: relative;
+  flex-grow: 1;
   width: 100%;
-  height: fit-content;
+  height: auto;
+
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: auto;
     animation: ${bobAnimation} 2s infinite alternate;
   }
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
 `;
 
 export const LeaderBoardWrapper = styled.div`
+  flex-grow: 1;
   width: 100%;
-  /* background-color: azure; */
+  padding: 0 10px;
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
+
 `;

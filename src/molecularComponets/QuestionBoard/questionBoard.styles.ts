@@ -43,10 +43,17 @@ export const Wrapper = styled.div`
     margin: 15px 0 18px;
   }
 
-  /* @media (max-width: 1300px) {
-    width: 650px;
-    max-width: 100% !important;
-  } */
+  @media (max-width: 500px) {
+    width: 85%;
+    .timerWrapper {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    width: 98%;
+  }
 `;
 
 export const DataTable = styled.table`
@@ -75,4 +82,11 @@ export const DataTable = styled.table`
     text-decoration: underline;
     color: ${colors.white};
   }
+
+  @media (max-width: 500px) {
+    th,td{
+      font-size: 8px;
+    }
+  }
+  
 `;

@@ -9,9 +9,8 @@ export default function Home() {
     <AppBackground>
       <Navigation />
       <HomeWrapper>
-        <AvatarWrapper>
-          <img src={AvatarImage} alt="avatar image" />
-        </AvatarWrapper>
+        <img className="avatarImage" src={AvatarImage} alt="avatar image" />
+        {/* <AvatarWrapper></AvatarWrapper> */}
         <LeaderBoardWrapper>
           <LeaderBoard />
         </LeaderBoardWrapper>
