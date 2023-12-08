@@ -28,7 +28,9 @@ export default function HowToPlayModal({
             reward chest within 12 hours to claim the prize worth of Rs.5,000.
             The chest is locked with a 10-letter secret word. You will have to
             discover that secret word by solving some puzzles. I have already
-            set up the puzzles. Go ahead and explore!
+            set up the puzzles. Go ahead and explore @
+            'kairo.hackburst23.qburst.build'!
+            <br />
             <br /> Hint: You can <strong>GET help</strong> from a{" "}
             <strong>postman</strong>.<br />
             <br /> Best of luck,
@@ -38,13 +40,14 @@ export default function HowToPlayModal({
           <p>
             Main Puzzle:
             <br /> Step 1:
-            <br /> Accessing the Main Puzzle The main puzzle will be published
-            here on the website. It will be unlocked when the event starts. Keep
-            an eye on the website.
+            <br /> Accessing the Main Puzzle
+            <br /> The main puzzle will be published here on the website. It
+            will be unlocked when the event starts. Keep an eye on the website.
             <br />
-            <br /> Step 2: Submitting Answers Add your solution to the repo
-            provided with all codes, prompts etc used to build the solution. Add
-            a demo video/screenshots if possible as well.
+            <br /> Step 2: Submitting Answers
+            <br /> Add your solution to the repo provided with all codes,
+            prompts etc used to build the solution. Add a demo video/screenshots
+            if possible as well.
             <br />
             <br /> Step 3: Results: An expert team will review your solution and
             shortlist top solutions. The shortlisted teams will be provided with
@@ -52,7 +55,7 @@ export default function HowToPlayModal({
             published after the final evaluation. INR 5000 awaits this quest.
             <br />
             <br /> Treasure Hunt:
-            <br /> Each puzzle carries a reward of INR 5000 in addition to the
+            <br /> Each puzzle carries a reward of INR 3000 in addition to the
             reward awaiting within the chest.
             <br />
             <br /> Step 1: Accessing Treasure Hunt Access each treasure hunt
@@ -71,7 +74,7 @@ export default function HowToPlayModal({
             <br /> Step 4: Unlocking the Chest Once you've solved all five
             treasure hunt puzzles, you will have all the letters for the secret
             code. Use them to unlock your chest and stand a chance to win INR
-            5000, by posting them to the API /unlock/
+            5000, by posting them to the API /unlock/http://13.200.106.34/
             <br />
             <br /> Upload all answer-related documents and screenshots to the
             provided repository for evaluation.
