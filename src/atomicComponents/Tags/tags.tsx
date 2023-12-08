@@ -18,6 +18,5 @@ export default function Tag({
     }
   };
 
-  console.log(getBgColor());
   return <TagWrapper bgColor={getBgColor()}>{label}</TagWrapper>;
 }

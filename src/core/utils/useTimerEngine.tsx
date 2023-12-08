@@ -5,6 +5,7 @@ interface TimerData {
   hours: number;
   minutes: number;
   seconds: number;
+  isTimerEnded: boolean;
 }
 
 function useTimerEngine(deadLine: string): TimerData {
@@ -12,6 +13,7 @@ function useTimerEngine(deadLine: string): TimerData {
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
+  const [isTimerEnded, setIsTimerEnded] = useState<boolean>(false);
 
   const getTimer = () => {
     const timer = Date.parse(deadLine) - Date.now();
@@ -21,11 +23,17 @@ function useTimerEngine(deadLine: string): TimerData {
       setHours(Math.floor((timer / (1000 * 60 * 60)) % 24));
       setMinutes(Math.floor((timer / 1000 / 60) % 60));
       setSeconds(Math.floor((timer / 1000) % 60));
+      if (timer === 0) {
+        setIsTimerEnded(true);
+      } else {
+        setIsTimerEnded(false);
+      }
     } else {
       setDay(0);
       setHours(0);
       setMinutes(0);
       setSeconds(0);
+      setIsTimerEnded(true);
     }
   };
 
@@ -40,6 +48,7 @@ function useTimerEngine(deadLine: string): TimerData {
     hours,
     minutes,
     seconds,
+    isTimerEnded,
   };
 }
 

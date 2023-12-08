@@ -6,16 +6,26 @@ import {
   questionConfig,
 } from "../../core/appConfig";
 import useTimerEngine from "../../core/utils/useTimerEngine";
+import ControlledTag from "../ControlledTag/controlledTag";
 import MiniTimer from "../MiniTimer/miniTimer";
 import { DataTable, Wrapper } from "./questionBoard.styles";
 
 export default function QuestionBoard() {
+  const { isTimerEnded } = useTimerEngine(questionConfig[0].opensIn);
+
+  const getNextQuestion = (): any => {
+    return questionConfig.find((question: QuestionConfigInterface) => {
+      const timeLeft = Date.parse(question.opensIn) - Date.now();
+
+      return timeLeft > 0;
+    });
+  };
   return (
     <Wrapper>
       <div className="padding">
         <div className="timerWrapper">
-          <p>Next Question</p>
-          <MiniTimer deadlineDate={appConfig.deadLineDate} />
+          <p>Next Question in</p>
+          <MiniTimer deadlineDate={getNextQuestion()?.opensIn} />
         </div>
         <hr />
         <DataTable>
@@ -33,7 +43,10 @@ export default function QuestionBoard() {
               <tr key={question.questionName}>
                 <td>
                   {question.questionLink ? (
-                    <a href={question.questionLink} target="_blank">
+                    <a
+                      href={isTimerEnded ? question.questionLink : "#"}
+                      target={isTimerEnded ? "_blank" : ""}
+                    >
                       {question.questionName}
                     </a>
                   ) : (
@@ -50,7 +63,7 @@ export default function QuestionBoard() {
                   <TextTimer deadLine={question.deadLine} />
                 </td>
                 <td>
-                  <Tag label="Locked" />
+                  <ControlledTag deadline={question.opensIn} />
                 </td>
               </tr>
             ))}
