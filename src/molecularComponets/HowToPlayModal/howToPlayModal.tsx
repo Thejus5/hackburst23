@@ -39,8 +39,7 @@ export default function HowToPlayModal({
           </p>
           <p>
             Main Puzzle:
-            <br /> Step 1:
-            <br /> Accessing the Main Puzzle
+            <br /> Step 1: Accessing the Main Puzzle
             <br /> The main puzzle will be published here on the website. It
             will be unlocked when the event starts. Keep an eye on the website.
             <br />
@@ -49,32 +48,20 @@ export default function HowToPlayModal({
             prompts etc used to build the solution. Add a demo video/screenshots
             if possible as well.
             <br />
-            <br /> Step 3: Results: An expert team will review your solution and
-            shortlist top solutions. The shortlisted teams will be provided with
-            an opportunity to demo their solution. The final results will be
+            <br /> Step 3: Results:
+            <br />
+            An expert team will review your solution and shortlist top
+            solutions. The shortlisted teams will be provided with an
+            opportunity to demo their solution. The final results will be
             published after the final evaluation. INR 5000 awaits this quest.
             <br />
             <br /> Treasure Hunt:
             <br /> Each puzzle carries a reward of INR 3000 in addition to the
             reward awaiting within the chest.
             <br />
-            <br /> Step 1: Accessing Treasure Hunt Access each treasure hunt
-            puzzle by visiting the API endpoint /p/[Qn Id]. The questions will
-            be unlocked at different times and will be shown in the website.
-            <br />
-            <br /> Step 2: Solving Treasure Hunt Puzzles Submit your answers for
-            each treasure hunt question using the API endpoint /a/[Qn Id]. If
-            your answer is correct, you will get 2 letters of the secret word.
-            <br />
-            <br /> Step 3: In case you need help solving the puzzle, Kairo will
-            give you a wish. Unlock a hint using the API endpoint /p/[Qn
-            Id]/hint Please note that using hints will reduce your points for
-            that particular question.
-            <br />
-            <br /> Step 4: Unlocking the Chest Once you've solved all five
-            treasure hunt puzzles, you will have all the letters for the secret
-            code. Use them to unlock your chest and stand a chance to win INR
-            5000, by posting them to the API /unlock/http://13.200.106.34/
+            <br /> Once you've solved all five treasure hunt puzzles, you will
+            have all the letters for the secret code. Use them to unlock your
+            chest and stand a chance to win INR 5000.
             <br />
             <br /> Upload all answer-related documents and screenshots to the
             provided repository for evaluation.
