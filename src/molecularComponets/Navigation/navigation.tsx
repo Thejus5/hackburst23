@@ -1,15 +1,12 @@
 import { useState } from "react";
-import Button from "../../atomicComponents/Button/button";
 import Title from "../../atomicComponents/Title/title";
-import { texts } from "../../core/texts";
 import { StyledNav } from "./navigation.style";
-import { appConfig } from "../../core/appConfig";
 import RulesModal from "../RulesModal/rulesModal";
 import ContactModal from "../ContactModal/contactModal";
 import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
-import IconButton from "../../atomicComponents/IconButton/iconButton";
+// import IconButton from "../../atomicComponents/IconButton/iconButton";
 
-import MailIcon from "../../assets/mailIconWhite.svg";
+// import MailIcon from "../../assets/mailIconWhite.svg";
 import HowToPlayModal from "../HowToPlayModal/howToPlayModal";
 
 function Navigation() {
@@ -38,9 +35,9 @@ function Navigation() {
     isHowToPlayOpen && setIsHowToPlayOpen(false);
   };
 
-  const navigateToRegistration = () => {
-    window.open(appConfig.registrationLink, "_blank");
-  };
+  // const navigateToRegistration = () => {
+  //   window.open(appConfig.registrationLink, "_blank");
+  // };
 
   return (
     <StyledNav>

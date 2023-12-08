@@ -1,10 +1,5 @@
-import Tag from "../../atomicComponents/Tags/tags";
 import TextTimer from "../../atomicComponents/TextTimer/textTimer";
-import {
-  QuestionConfigInterface,
-  appConfig,
-  questionConfig,
-} from "../../core/appConfig";
+import { QuestionConfigInterface, questionConfig } from "../../core/appConfig";
 import useTimerEngine from "../../core/utils/useTimerEngine";
 import ControlledTag from "../ControlledTag/controlledTag";
 import MiniTimer from "../MiniTimer/miniTimer";
