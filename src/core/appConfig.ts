@@ -32,7 +32,7 @@ export const questionConfig: QuestionConfigInterface[] = [
     opensIn: "8 december 2023 18:00:00",
     hintIn: "8 december 2023 18:30:00",
     deadLine: "9 december 2023 06:00:00",
-    questionLink:"www.google.com"
+    questionLink:"https://kairo.hackburst23.qburst.build/generic.pdf"
   },
   {
     questionName: "1",
