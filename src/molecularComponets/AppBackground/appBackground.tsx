@@ -1,14 +1,8 @@
 import React from "react";
-import { Avatar, Background } from "./appBackground.styles";
-import avatarImage from "../../assets/avatar.png";
+import { Background } from "./appBackground.styles";
 
 function AppBackground({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <Background>
-      <Avatar src={avatarImage} alt="Avatar Image"/>
-      {children}
-    </Background>
-  );
+  return <Background>{children}</Background>;
 }
 
 export default AppBackground;

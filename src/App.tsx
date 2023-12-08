@@ -1,7 +1,7 @@
-import CountdownTimer from "./CountDownTimer/countDownTimer";
+import Home from "./HomePage/home";
 
 function App() {
-  return <CountdownTimer/>;
+  return <Home/>;
 }
 
 export default App;

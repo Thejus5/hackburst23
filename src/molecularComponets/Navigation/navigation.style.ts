@@ -27,6 +27,9 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     cursor: pointer;
   }
+  .textLinks:last-child{
+    margin: 0;
+  }
 
   .hamburgerMenu {
     z-index: 2;
@@ -88,7 +91,6 @@ export const StyledNav = styled.nav`
       rgba(4, 47, 112, 0.47) 84.22%
     );
     backdrop-filter: blur(3.2949790954589844px);
-    padding: 10px;
 
     translate: 100%;
     transition: translate 200ms ease-in-out;
@@ -108,7 +110,7 @@ export const StyledNav = styled.nav`
     translate: 0;
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 1050px) {
     .linkWrapper {
       display: none;
     }

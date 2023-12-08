@@ -19,7 +19,7 @@ export const ModalWrapper = styled.section<{ open: boolean }>`
     max-width: 770px;
     padding: 45px;
     height: fit-content;
-    max-height: 100%;
+    max-height: 80vh;
 
     color: ${colors.white};
 

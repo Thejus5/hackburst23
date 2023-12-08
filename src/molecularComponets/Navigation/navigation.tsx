@@ -1,16 +1,18 @@
 import { useState } from "react";
-import Button from "../../atomicComponents/Button/button";
 import Title from "../../atomicComponents/Title/title";
-import { texts } from "../../core/texts";
 import { StyledNav } from "./navigation.style";
-import { appConfig } from "../../core/appConfig";
 import RulesModal from "../RulesModal/rulesModal";
 import ContactModal from "../ContactModal/contactModal";
 import LeaderboardModal from "../LeaderboardModal/leaderboardModal";
+// import IconButton from "../../atomicComponents/IconButton/iconButton";
+
+// import MailIcon from "../../assets/mailIconWhite.svg";
+import HowToPlayModal from "../HowToPlayModal/howToPlayModal";
 
 function Navigation() {
   const [isRulesOpen, setIsRulesOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+  const [isHowToPlayOpen, setIsHowToPlayOpen] = useState<boolean>(false);
   const [isLeaderBoardOpen, setIsLeaderBoardOpen] = useState<boolean>(false);
 
   const toggleRules = () => {
@@ -22,16 +24,20 @@ function Navigation() {
   const toggleLeaderboard = () => {
     setIsLeaderBoardOpen(!isLeaderBoardOpen);
   };
+  const toggleHowToPlay = () => {
+    setIsHowToPlayOpen(!isHowToPlayOpen);
+  };
 
   const closeModal = () => {
     isRulesOpen && setIsRulesOpen(false);
     isContactOpen && setIsContactOpen(false);
     isLeaderBoardOpen && setIsLeaderBoardOpen(false);
+    isHowToPlayOpen && setIsHowToPlayOpen(false);
   };
 
-  const navigateToRegistration = () => {
-    window.open(appConfig.registrationLink, "_blank");
-  };
+  // const navigateToRegistration = () => {
+  //   window.open(appConfig.registrationLink, "_blank");
+  // };
 
   return (
     <StyledNav>
@@ -41,13 +47,16 @@ function Navigation() {
           <p className="textLinks" onClick={toggleRules}>
             Rules
           </p>
+          <p className="textLinks" onClick={toggleHowToPlay}>
+            How to play?
+          </p>
           <p className="textLinks" onClick={toggleLeaderboard}>
             Leaderboard
           </p>
           <p className="textLinks" onClick={toggleContact}>
             contact
           </p>
-          <Button label={texts.register} onClick={navigateToRegistration} />
+          {/* <IconButton icon={MailIcon}/> */}
         </div>
         <label className="hamburgerMenu">
           <input type="checkbox" />
@@ -57,13 +66,16 @@ function Navigation() {
             <p className="textLinks" onClick={toggleRules}>
               Rules
             </p>
+            <p className="textLinks" onClick={toggleHowToPlay}>
+              How to play?
+            </p>
             <p className="textLinks" onClick={toggleLeaderboard}>
               Leaderboard
             </p>
             <p className="textLinks" onClick={toggleContact}>
               contact
             </p>
-            <Button label={texts.register} onClick={navigateToRegistration} />
+            {/* <IconButton icon={MailIcon}/> */}
           </div>
         </aside>
       </div>
@@ -71,6 +83,7 @@ function Navigation() {
       <RulesModal open={isRulesOpen} closeModal={closeModal} />
       <ContactModal open={isContactOpen} closeModal={closeModal} />
       <LeaderboardModal open={isLeaderBoardOpen} closeModal={closeModal} />
+      <HowToPlayModal open={isHowToPlayOpen} closeModal={closeModal} />
     </StyledNav>
   );
 }
